@@ -48,7 +48,7 @@ a {
 }
 
 .chat-header {
-	background: var(--dark-color-a);
+	background-color: rgb(95, 158, 160);
 	color: #fff;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -65,6 +65,7 @@ a {
 
 .chat-sidebar {
 	background: var(--dark-color-b);
+	background-color: cadetblue;
 	color: #fff;
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
@@ -88,9 +89,11 @@ a {
 .chat-messages {
 	padding: 30px;
 	max-height: 500px;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
-
+::-webkit-scrollbar { 
+    display: none;
+}
 .chat-messages .message {
 	padding: 10px;
 	margin-bottom: 15px;
@@ -112,7 +115,8 @@ a {
 
 .chat-form-container {
 	padding: 20px 30px;
-	background-color: var(--dark-color-a);
+	background-color: cadetblue;
+
 }
 
 .chat-form-container form {
