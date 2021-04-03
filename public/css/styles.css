@@ -181,13 +181,33 @@ a {
     height: 45px;
     border-radius: 25px;
 }
+.fa-bars {
+	display: none;
+}
+.fa-times {
+	display: none;
+}
 
 @media (max-width: 700px) {
 	.chat-main {
 		display: block;
 	}
-
 	.chat-sidebar {
 		display: none;
+	}
+	.chat-header {
+		display: block;
+	}
+	.chat-header h1 {
+		text-align: center;
+		font-size: 1.5rem;
+	}
+	.hamburger-icon {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 15px;
+	}
+	.fa-bars {
+		display: block;
 	}
 }

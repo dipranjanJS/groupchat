@@ -4,6 +4,9 @@ const msgBox = document.querySelector('#msg');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
+const menu = document.querySelector('.fa-bars');
+const close = document.querySelector('.fa-times');
+const sidebar = document.querySelector('.chat-sidebar');
 
 const {username, room} = Qs.parse(location.search, {
     ignoreQueryPrefix: true
@@ -47,3 +50,16 @@ function outputUsers(users) {
         return `<li>${user.username}</li>`
     }).join('')}`
 }
+
+menu.addEventListener('click', () => {
+    menu.style.display = 'none';
+    sidebar.style.display = 'block';
+    sidebar.classList.add('trans')
+    close.style.display = 'block'
+});
+
+close.addEventListener('click', () => {
+    menu.style.display = 'block';
+    sidebar.style.display = 'none';
+    close.style.display = 'none'
+});
